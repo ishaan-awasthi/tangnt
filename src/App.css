@@ -1,6 +1,18 @@
-.wrapper {
+#wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding-top: -10vh; /* This will move everything up slightly from center */
+}
+
+#text-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#image-wrapper img {
+  max-width: 300px; /* Adjust this value to make the image smaller or larger */
+  height: auto;
 }
