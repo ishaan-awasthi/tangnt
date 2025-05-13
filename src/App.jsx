@@ -1,5 +1,5 @@
 import './App.css'
-import temp2 from './assets/temp2.jpg'
+import pic from './assets/you should not be trying to read this.png'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
           <h1>I KNOW SOMETHING YOU DON'T.</h1>
         </div>
         <div id="image-wrapper">
-          <img src={temp2}/>
+          <img src={pic}/>
         </div>
       </div>
     </>
