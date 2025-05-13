@@ -6,7 +6,7 @@ function App() {
     <>
       <div id="wrapper">
         <div id="text-wrapper">
-          <h1>coming soon.</h1>
+          <h1>COMING SOON.</h1>
         </div>
         <div id="image-wrapper">
           <img src={temp2}/>
