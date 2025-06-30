@@ -1,0 +1,19 @@
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transform: translateY(-6vh); /* Adjust the value as needed */
+  z-index: 1;
+}
+
+#text-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#image-wrapper img {
+  max-width: 300px; /* Adjust this value to make the image smaller or larger */
+  height: auto;
+}
