@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
