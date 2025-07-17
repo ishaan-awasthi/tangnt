@@ -1,21 +1,181 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html, body, #root {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
-:root {
-  --primary-color: #000000;
-  --secondary-color: #ffffff;
-  font-family: 'Manrope', sans-serif;
+@theme {
+  /* Single set of color variables that change with .dark class */
+  --color-sidebar: #F8F9FA;
+  --color-bg: #FFFFFF;
+  --color-main: #181818;
+  --color-sub: #6B7280;
+  --color-hover: #E5E7EB;
+  --color-divider: #000;
+  
+  --font-Manrope: Manrope, sans-serif;
+  --font-Roboto: Roboto, sans-serif;
 }
 
-body {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+/* Dark mode overrides */
+.dark {
+  --color-sidebar: #181818;
+  --color-bg: #212121;
+  --color-main: #FFFFFF;
+  --color-sub: #CBCBCB;
+  --color-hover: #303030;
+  --color-divider: #181818;
 }
+
+@layer base {
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-ExtraLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-ExtraLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-SemiBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-ThinItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+/* Custom dark scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #181818;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+} 
