@@ -1,20 +1,18 @@
-import { VisualizationAreaFooter } from './VisualizationAreaFooter';
+"use client";
+import { VisualizationAreaFooter } from "./VisualizationAreaFooter";
 
-interface VisualizationAreaProps {
-  onToggleTheme: () => void;
-  isDark: boolean;
-}
-
-export function VisualizationArea({ onToggleTheme, isDark }: VisualizationAreaProps) {
+export function VisualizationArea() {
   return (
-    <div className="flex-1 flex flex-col bg-bg">
+    <div className="flex-1 flex flex-col bg-light-bg dark:bg-dark-bg">
       {/* Top content */}
       <div className="flex-1 flex items-center justify-center">
-        <div className="text-sub text-xs font-thin">PLACEHOLDER - VIZ AREA GOES HERE</div>
+        <div className="text-xs font-thin text-light-sub dark:text-dark-sub">
+          PLACEHOLDER - VIZ AREA GOES HERE
+        </div>
       </div>
       {/* Footer pinned to bottom */}
       <div className="w-full">
-        <VisualizationAreaFooter onToggleTheme={onToggleTheme} isDark={isDark} />
+        <VisualizationAreaFooter />
       </div>
     </div>
   );

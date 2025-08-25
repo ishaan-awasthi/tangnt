@@ -1,3 +1,4 @@
+"use client";
 
 export function SidebarIcon({
     icon: Icon,
@@ -10,12 +11,13 @@ export function SidebarIcon({
     isExpanded: boolean;
     size: number;
   }) {
+
     return (
       <div className="w-full px-2">
-        <div className="flex items-center w-full cursor-pointer rounded-lg hover:bg-hover transition-colors pt-2.5 pb-2.5 pl-5">
-          <Icon className="text-main" size={size} />
+        <div className={`flex items-center w-full cursor-pointer rounded-lg transition-colors pt-2.5 pb-2.5 pl-3 hover:bg-light-hover dark:hover:bg-dark-hover`}>
+          <Icon className="text-light-sub hover:text-light-main dark:text-dark-sub dark:hover:text-dark-main" size={size} />
           {isExpanded && (
-            <span className="text-sm text-main font-light pl-3">
+            <span className={`text-sm font-light pl-3 text-light-sub hover:text-light-main dark:text-dark-sub dark:hover:text-dark-main`}>
               {label}
             </span>
           )}
