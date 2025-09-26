@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* Custom dark mode variant for v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@theme {
+  /* Custom colors for light and dark themes */
+  --color-light-bg: #FFFFFF;
+  --color-light-main: #181818;
+  --color-light-sub: #6B7280;
+  --color-light-sidebar: #F8F9FA;
+  --color-light-hover: #E5E7EB;
+  --color-light-divider: #000000;
+  
+  --color-dark-bg: #212121;
+  --color-dark-main: #FFFFFF;
+  --color-dark-sub: #CBCBCB;
+  --color-dark-sidebar: #181818;
+  --color-dark-hover: #303030;
+  --color-dark-divider: #181818;
+  
+  /* Font families */
+  --font-family-manrope: 'Manrope', sans-serif;
+}
+
+@layer base {
+  /* Font declarations */
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-ExtraLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Manrope';
+    src: url('/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-ExtraLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-SemiBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('/RobotoMono-ThinItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #FFFFFF;
+}
+.dark ::-webkit-scrollbar {
+  background: #212121;
+}
+::-webkit-scrollbar-thumb {
+  background: #6B7280;
+  border-radius: 8px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #CBCBCB;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #181818;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #FFFFFF;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
