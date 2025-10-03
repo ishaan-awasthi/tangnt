@@ -8,7 +8,7 @@ export default function LandingPage() {
           <a href="/login" className="px-6 py-2 bg-light-main dark:bg-dark-main text-light-bg dark:text-dark-bg rounded-lg hover:bg-light-hover dark:hover:bg-dark-hover transition-colors">
             Login
           </a>
-          <a href="/" className="px-6 py-2 border border-light-main dark:border-dark-main text-light-main dark:text-dark-main rounded-lg hover:bg-light-hover dark:hover:bg-dark-hover transition-colors">
+          <a href="/demo" className="px-6 py-2 border border-light-main dark:border-dark-main text-light-main dark:text-dark-main rounded-lg hover:bg-light-hover dark:hover:bg-dark-hover transition-colors">
             Try Demo
           </a>
         </div>

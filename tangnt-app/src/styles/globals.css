@@ -10,6 +10,16 @@ html, body, #root {
   padding: 0;
 }
 
+body {
+  background-color: var(--color-light-bg);
+  color: var(--color-light-main);
+}
+
+.dark body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-main);
+}
+
 @theme {
   /* Custom colors for light and dark themes */
   --color-light-bg: #FFFFFF;

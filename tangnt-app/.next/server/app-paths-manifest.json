@@ -1,3 +1,5 @@
 {
+  "/api/tangents/route": "app/api/tangents/route.js",
+  "/t/[id]/page": "app/t/[id]/page.js",
   "/(auth)/page": "app/(auth)/page.js"
 }
